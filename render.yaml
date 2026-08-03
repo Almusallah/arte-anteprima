@@ -1,0 +1,14 @@
+# Render Blueprint — Gặp Art Services static site (staging)
+# Deploys the Vite build to a static site on Render's free tier.
+# Deliberately non-obvious service name: hidden staging URL until a
+# production domain is chosen and pointed.
+services:
+  - type: web
+    name: arte-anteprima
+    runtime: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./dist
+    headers:
+      - path: /*
+        name: X-Robots-Tag
+        value: noindex, nofollow
