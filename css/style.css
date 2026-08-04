@@ -551,6 +551,11 @@ body:not(.is-loading) .loader { pointer-events: none; }
   line-height: 0.92;
   margin-top: 1rem;
 }
+.collab__note {
+  color: var(--muted);
+  max-width: 58ch;
+  margin-top: 1.2rem;
+}
 .collab__list { border-top: 1px solid var(--line); }
 .collab__list li {
   padding: clamp(0.8rem, 2vh, 1.5rem) 0;
