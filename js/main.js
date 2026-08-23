@@ -316,3 +316,38 @@
     boot();
   }
 })();
+
+/* ---------- Research index + sticky pane ---------- */
+(function () {
+  var grid = document.querySelector("[data-research]");
+  if (!grid) return;
+  var items = Array.prototype.slice.call(grid.querySelectorAll(".research__li"));
+  var pane = grid.querySelector(".research__pane");
+  var finePointer = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+  function activate(li) {
+    items.forEach(function (x) {
+      var on = x === li;
+      x.classList.toggle("is-active", on);
+      var b = x.querySelector(".research__item");
+      if (b) b.setAttribute("aria-expanded", on ? "true" : "false");
+    });
+    if (pane) {
+      var d = li.querySelector(".research__detail");
+      pane.innerHTML = d ? d.outerHTML : "";
+    }
+    if (window.ScrollTrigger) ScrollTrigger.refresh();
+  }
+
+  items.forEach(function (li) {
+    var btn = li.querySelector(".research__item");
+    if (!btn) return;
+    btn.addEventListener("click", function () { activate(li); });
+    if (finePointer) {
+      btn.addEventListener("pointerenter", function () { activate(li); });
+    }
+  });
+
+  var first = grid.querySelector(".research__li.is-active") || items[0];
+  if (first) activate(first);
+})();
