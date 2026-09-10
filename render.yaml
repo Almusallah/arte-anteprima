@@ -1,4 +1,4 @@
-# Officine Gặp — public website. Existing Render service retained.
+# Officine Gặp — public website on Render.
 services:
   - type: web
     name: arte-anteprima
@@ -13,5 +13,26 @@ services:
         value: index, follow
     routes:
       - type: redirect
-        source: /about/*
-        destination: /#practice
+        source: "/writing-and-research"
+        destination: "/lab/#the-city-otherwise"
+      - type: redirect
+        source: "/reinterpreting-narrowness*"
+        destination: "/lab/#narrowness"
+      - type: redirect
+        source: "/crafting-a-sonic-city*"
+        destination: "/lab/#casc"
+      - type: redirect
+        source: "/tuar*"
+        destination: "/lab/#turtle-lake"
+      - type: redirect
+        source: "/-g%E1%BA%B7p-series-pop"
+        destination: "/lab/#gap-series"
+      - type: redirect
+        source: "/talks-and-symposia*"
+        destination: "/lab/"
+      - type: redirect
+        source: "/collaborations*"
+        destination: "/lab/#counter-gestures"
+      - type: redirect
+        source: "/about*"
+        destination: "/#practice"

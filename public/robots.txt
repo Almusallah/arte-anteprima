@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://officinegap.com/sitemap.xml

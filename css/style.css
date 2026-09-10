@@ -131,7 +131,7 @@ footer>div{font-size:var(--type-meta);line-height:1.5}
 .lab-page .skip:focus{background:#000}
 .practice-heading{display:flex;flex-direction:column;justify-content:space-evenly;gap:52px;min-height:calc(100svh - 80px);margin:0;padding:50px 0 100px;text-align:left}
 .practice-heading h1,.about-intro h1{font-size:28px;font-weight:400;line-height:1.25;letter-spacing:-.02em;margin:0}
-.practice-heading p{max-width:40ch;font-size:clamp(30px,3.3vw,64px);font-weight:900;line-height:.98;margin:0;letter-spacing:-.035em;text-transform:uppercase}
+.practice-heading p,.practice-heading h1{max-width:40ch;font-size:clamp(30px,3.3vw,64px);font-weight:900;line-height:.98;margin:0;letter-spacing:-.035em;text-transform:uppercase}
 .practice-gallery{--practice-image-height:clamp(420px,70svh,820px);position:relative;max-width:1440px;margin:0 auto;padding:0 48px}
 .practice-slide{width:min(100%,calc(var(--practice-image-height) * var(--practice-image-ratio)));margin:0 auto}
 .practice-slide[hidden]{display:none}
@@ -176,7 +176,7 @@ footer>div{font-size:var(--type-meta);line-height:1.5}
  .index-note.production-note{margin:0 0 20px}
  .about-intro,.about-columns{grid-template-columns:1fr;gap:28px}
  .practice-heading{min-height:calc(100svh - 68px);gap:42px;padding:26px 0 80px}.about-intro h1{font-size:24px}
- .practice-heading p{font-size:clamp(25px,6.8vw,40px);line-height:1.02;letter-spacing:-.025em}
+ .practice-heading p,.practice-heading h1{font-size:clamp(25px,6.8vw,40px);line-height:1.02;letter-spacing:-.025em}
  .practice-gallery{--practice-image-height:clamp(320px,60svh,600px);padding:0}
  .practice-arrow{width:44px;font-size:24px;z-index:1;text-shadow:0 1px 4px #000,0 0 2px #000}
  .practice-map .practice-media{aspect-ratio:auto;height:clamp(440px,70svh,660px)}
@@ -230,3 +230,11 @@ footer>div{font-size:var(--type-meta);line-height:1.5}
 @media(prefers-reduced-motion:reduce){.project-index .row-preview-source{transition:none;transform:translateY(-50%)}}
 @media(prefers-reduced-motion:reduce){#work-viewer[open]{animation:none}}
 @media(prefers-reduced-motion:reduce){.selected-grid{transition:none}}
+
+/* Regional context is visible to visitors as well as search engines. */
+.regional-services{max-width:900px;margin:0 8px 36px;font-size:16px;line-height:1.55}
+.regional-services h2{font-size:clamp(21px,2vw,29px);font-weight:500;line-height:1.2;letter-spacing:-.02em;margin:0 0 18px}
+.regional-services p{margin:0 0 14px}
+.regional-services a{text-decoration:underline;text-underline-offset:4px}
+.lab-page .regional-services{margin-bottom:60px}
+@media(max-width:700px){.regional-services{margin:0 0 28px;font-size:15px}.lab-page .regional-services{margin-bottom:32px}}

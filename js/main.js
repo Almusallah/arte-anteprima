@@ -7,9 +7,6 @@ for(const button of document.querySelectorAll('.image-detail-toggle')){
   button.setAttribute('aria-pressed',String(active));
   button.setAttribute('aria-label',`${active?'Show overview':'Show detail'}: ${button.dataset.work}`);
   button.querySelectorAll('img').forEach((img,i)=>img.setAttribute('aria-hidden',String(i===(active?0:1))));
-  const figure=button.closest('figure');
-  figure.querySelector('.overview-credit').hidden=active;
-  figure.querySelector('.detail-credit').hidden=!active;
  };
  button.addEventListener('click',()=>{pinned=!pinned;hovered=false;render();});
  button.addEventListener('pointerenter',event=>{if(event.pointerType==='mouse'){hovered=true;render();}});
