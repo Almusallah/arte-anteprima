@@ -231,10 +231,11 @@ footer>div{font-size:var(--type-meta);line-height:1.5}
 @media(prefers-reduced-motion:reduce){#work-viewer[open]{animation:none}}
 @media(prefers-reduced-motion:reduce){.selected-grid{transition:none}}
 
-/* Regional context is visible to visitors as well as search engines. */
-.regional-services{max-width:900px;margin:0 8px 36px;font-size:16px;line-height:1.55}
-.regional-services h2{font-size:clamp(21px,2vw,29px);font-weight:500;line-height:1.2;letter-spacing:-.02em;margin:0 0 18px}
-.regional-services p{margin:0 0 14px}
-.regional-services a{text-decoration:underline;text-underline-offset:4px}
-.lab-page .regional-services{margin-bottom:60px}
-@media(max-width:700px){.regional-services{margin:0 0 28px;font-size:15px}.lab-page .regional-services{margin-bottom:32px}}
+/* Keep the conversation link together with the footer contact details. */
+.footer-invitation{max-width:900px;margin:0 0 14px;font-size:16px;line-height:1.55}
+.footer-invitation a{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:700px){
+ footer .footer-invitation{grid-column:1/-1;grid-row:1;margin:0 0 10px;font-size:15px}
+ footer .footer-signature,footer .footer-email{grid-row:2}
+ footer>div>a{grid-row:3}
+}
