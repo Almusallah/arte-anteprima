@@ -111,10 +111,16 @@ footer>div{font-size:var(--type-meta);line-height:1.5}
 .selected-grid .photo-credit{overflow-wrap:anywhere}
 #images{padding-bottom:0}
 #practice.practice-intro{grid-template-columns:calc(var(--index-artist-width) + var(--index-artwork-width)) minmax(0,1fr);gap:0;background:#000;color:#fff;margin:48px -30px 76px;padding:62px 30px 68px}
-#practice.practice-intro h1{max-width:560px;padding:0 42px 0 8px;text-wrap:initial}
+#practice.practice-intro .production-copy{max-width:660px;padding:0 48px 0 8px}
+#practice.practice-intro h1{max-width:none;padding:0;text-wrap:initial}
 #practice.practice-intro h1 span{display:block}
+#practice.practice-intro .production-copy p{font-size:18px;line-height:1.55;letter-spacing:0;margin:22px 0 0;max-width:none}
 #practice.practice-intro .practice-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,1fr);grid-auto-flow:column;align-content:start;row-gap:10px;font-size:18px;line-height:1.4;letter-spacing:0;padding:4px 0 0}
 #practice.practice-intro .practice-list li{padding:0 8px}
+@media(min-width:701px) and (max-width:1000px){
+ #practice.practice-intro{grid-template-columns:1fr;gap:32px}
+ #practice.practice-intro .production-copy{max-width:720px;padding-right:8px}
+}
 .selected-row th,.selected-row td:nth-child(2){font-weight:400}
 .index-note{margin-top:44px}
 .index-note.production-note{margin:0 8px 24px}
@@ -169,7 +175,9 @@ footer>div{font-size:var(--type-meta);line-height:1.5}
  .selected-grid .image-detail-toggle img:last-child{object-fit:cover}
  .selected-grid figcaption{gap:12px}.selected-grid figcaption>span:last-child{max-width:44%;font-size:12px}
  #practice.practice-intro{grid-template-columns:1fr;gap:28px;margin:10px -16px 48px;padding:40px 16px 44px}
- #practice.practice-intro h1{font-size:21px;padding:0;max-width:390px}
+ #practice.practice-intro .production-copy{max-width:none;padding:0}
+ #practice.practice-intro h1{font-size:21px;padding:0;max-width:none}
+ #practice.practice-intro .production-copy p{font-size:16px;line-height:1.55;margin-top:18px}
  #practice.practice-intro .practice-list{display:block;font-size:16px;line-height:1.75;padding:0}
  #practice.practice-intro .practice-list li{padding:0}
  .footer-email{font-size:16px}
