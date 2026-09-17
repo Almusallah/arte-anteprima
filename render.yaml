@@ -25,7 +25,8 @@ services:
         source: "/tuar*"
         destination: "/lab/#turtle-lake"
       - type: redirect
-        source: "/-g%E1%BA%B7p-series-pop"
+        # Match the retired Gặp Series URL with either encoded or decoded accents.
+        source: "/-g*"
         destination: "/lab/#gap-series"
       - type: redirect
         source: "/talks-and-symposia*"
@@ -36,3 +37,9 @@ services:
       - type: redirect
         source: "/about*"
         destination: "/#practice"
+      - type: redirect
+        source: "/mobile-projects*"
+        destination: "/lab/"
+      - type: redirect
+        source: "/contact-form*"
+        destination: "/#contact"
