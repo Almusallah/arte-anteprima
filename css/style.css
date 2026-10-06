@@ -245,3 +245,13 @@ footer>div{font-size:var(--type-meta);line-height:1.5}
  footer .footer-signature,footer .footer-email{grid-row:2}
  footer>div>a{grid-row:3}
 }
+
+/* Team experience: below the carousel on desktop, before the footer on mobile. */
+.team-attribution{margin:24px 0 0;max-width:none;color:#696664;font-size:clamp(10px,.8vw,12px);font-weight:400;line-height:1.5;letter-spacing:0}
+.team-attribution-mobile{display:none}
+#practice.practice-intro{margin-top:24px}
+@media(max-width:700px){
+ .team-attribution-desktop{display:none}
+ .team-attribution-mobile{display:block;margin:0 0 20px;font-size:12px;line-height:1.5;text-wrap:pretty}
+ #practice.practice-intro{margin-top:10px}
+}
