@@ -13,33 +13,42 @@ services:
         value: index, follow
     routes:
       - type: redirect
+        source: "/production"
+        destination: "/production/"
+      - type: redirect
+        source: "/lab"
+        destination: "/"
+      - type: redirect
+        source: "/lab/"
+        destination: "/"
+      - type: redirect
         source: "/writing-and-research"
-        destination: "/lab/#the-city-otherwise"
+        destination: "/#the-city-otherwise"
       - type: redirect
         source: "/reinterpreting-narrowness*"
-        destination: "/lab/#narrowness"
+        destination: "/#narrowness"
       - type: redirect
         source: "/crafting-a-sonic-city*"
-        destination: "/lab/#casc"
+        destination: "/#casc"
       - type: redirect
         source: "/tuar*"
-        destination: "/lab/#turtle-lake"
+        destination: "/#turtle-lake"
       - type: redirect
         # Match the retired Gặp Series URL with either encoded or decoded accents.
         source: "/-g*"
-        destination: "/lab/#gap-series"
+        destination: "/#gap-series"
       - type: redirect
         source: "/talks-and-symposia*"
-        destination: "/lab/"
+        destination: "/"
       - type: redirect
         source: "/collaborations*"
-        destination: "/lab/#counter-gestures"
+        destination: "/#counter-gestures"
       - type: redirect
         source: "/about*"
-        destination: "/#practice"
+        destination: "/#about"
       - type: redirect
         source: "/mobile-projects*"
-        destination: "/lab/"
+        destination: "/"
       - type: redirect
         source: "/contact-form*"
         destination: "/#contact"
